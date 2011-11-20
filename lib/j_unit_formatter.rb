@@ -1,6 +1,10 @@
+require 'rspec/core/formatters/base_text_formatter'
+require 'builder/xmlmarkup'
+
 # Dumps rspec results as a JUnit XML file.
 # Based on XML schema: http://windyroad.org/dl/Open%20Source/JUnit.xsd
-class RSpec::Core::Formatters::JUnitFormatter < RSpec::Core::Formatters::BaseFormatter
+class JUnitFormatter < RSpec::Core::Formatters::BaseFormatter
+
   def xml
     @xml ||= Builder::XmlMarkup.new :target => output, :indent => 2 
   end
