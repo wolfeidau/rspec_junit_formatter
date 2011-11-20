@@ -14,17 +14,20 @@ describe JUnitFormatter do
 
   end
 
-  describe 'passed, pending and failed' do
+  describe 'XML format' do
 
-    describe 'example_passed' do
+    describe 'summary section' do
 
-      it 'should call the increment method' do
+      it 'should match the sample for two tests' do
 
         @formatter.start_dump
         @formatter.dump_summary(0.00001, 2, 0, 0)
 
-        puts @output.string
-
+        @output.string.should eql('<?xml version="1.0" encoding="UTF-8"?>
+<testsuite tests="2" failures="0" errors="0" time="0.000010" timestamp="2011-01-01T00:00:00Z">
+  <properties/>
+</testsuite>
+')
       end
 
     end
