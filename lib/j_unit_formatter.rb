@@ -1,5 +1,7 @@
 require 'rspec/core/formatters/base_text_formatter'
 require 'builder/xmlmarkup'
+require 'stringio'
+require 'time'
 
 # Dumps rspec results as a JUnit XML file.
 # Based on XML schema: http://windyroad.org/dl/Open%20Source/JUnit.xsd

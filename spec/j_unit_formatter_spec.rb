@@ -14,7 +14,7 @@ describe JUnitFormatter do
 
   end
 
-  it 'should match the sample header two tests' do
+  it 'should match the sample header for two tests' do
 
     @formatter.start_dump
     @formatter.dump_summary(0.00001, 2, 0, 0)
